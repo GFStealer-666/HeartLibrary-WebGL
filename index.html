@@ -6,6 +6,7 @@
     <title>Heart Library – Web Demo</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+  <style>html,body{margin:0;height:100%;overflow:hidden;background:#231F20}#unity-container.unity-desktop{position:fixed;left:0;top:0;right:0;bottom:34px;transform:none;width:auto;height:auto}#unity-container.unity-desktop #unity-canvas{width:100% !important;height:100% !important;display:block}#unity-footer{display:none}#heart-controls{position:fixed;left:0;right:0;bottom:0;height:34px;font:13px/34px sans-serif;color:#ddd;text-align:center;white-space:nowrap;overflow:hidden}</style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -17,7 +18,6 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-      <div id="heart-controls" style="position:absolute;left:0;right:0;bottom:-46px;font:13px/1.4 sans-serif;color:#555;text-align:center"><b>Hold</b> left mouse on a button to press it &middot; <b>W A S D</b> / arrows to walk &middot; hold <b>right mouse</b> and move to look &middot; drag a heart to turn it, scroll over it to zoom</div>
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
@@ -130,5 +130,7 @@
       document.body.appendChild(script);
 
     </script>
+  <div id="heart-controls"><b>Click</b> to go fullscreen (Esc to leave) &middot; <b>hold</b> left mouse on a button to press it &middot; <b>W A S D</b> to walk &middot; hold <b>right mouse</b> to look &middot; drag a heart to turn it, scroll to zoom</div>
+    <script>document.addEventListener('pointerdown',function go(){var b=document.querySelector('#unity-fullscreen-button');if(b&&b.onclick){document.removeEventListener('pointerdown',go,true);b.onclick();}},true);</script>
   </body>
 </html>
