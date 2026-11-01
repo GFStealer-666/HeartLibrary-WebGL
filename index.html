@@ -130,7 +130,7 @@
       document.body.appendChild(script);
 
     </script>
-  <div id="heart-controls"><b>Click</b> to go fullscreen (Esc to leave) &middot; <b>hold</b> left mouse on a button to press it &middot; <b>W A S D</b> to walk &middot; hold <b>right mouse</b> to look &middot; scroll to move closer drag a heart to turn it, scroll to zoommiddot; on a heart: drag a part to pull it out, drag beside it to turn, R to reset</div>
+  <div id="heart-controls"><b>Click</b> to go fullscreen (Esc to leave) &middot; <b>hold</b> left mouse on a button to press it &middot; <b>W A S D</b> to walk &middot; hold <b>right mouse</b> to look &middot; <b>scroll</b> to move closer &middot; on a heart: <b>left-drag</b> to move, <b>right-drag</b> to turn (parts too), <b>R</b> to reset</div>
     <script>document.addEventListener('pointerdown',function go(){var b=document.querySelector('#unity-fullscreen-button');if(b&&b.onclick){document.removeEventListener('pointerdown',go,true);b.onclick();}},true);</script>
   </body>
 </html>
